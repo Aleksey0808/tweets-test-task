@@ -1,7 +1,7 @@
 {
-  "name": "test-task-goit",
+  "name": "tweets-test-task",
   "version": "0.1.0",
-  "homepage": "https://Aleksey0808.github.io/tweets-test-task/",
+  "homepage": "https://Aleksey0808.github.io/tweets-test-task",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
