@@ -39,6 +39,11 @@
   margin-top: -8px;
 }
 
+.user {
+  padding-top: 55px;
+ font-size: 22px;
+}
+
 .picture {
   background-image: url(../../image/cardImg.png);
   height: 168px;
@@ -67,7 +72,7 @@
   border-radius: 50%;
 }
 .tweetsText {
-  margin-top: 88px;
+  margin-top: 60px;
   display: flex;
   justify-content: center;
   margin-bottom: 16px;

@@ -1,16 +1,17 @@
-import { useState } from "react";
-import { CardList } from "../../components/cardList/CardList";
-import css from "./Tweets.module.css";
-import { RiArrowGoBackFill } from "react-icons/ri";
-import { Link } from "react-router-dom";
-import userData from "../../db/userData.json";
+import { useState } from 'react'
+import { CardList } from '../../components/cardList/CardList'
+import css from './Tweets.module.css'
+import { RiArrowGoBackFill } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
+// import userData from '../../db/userData.json'
 
 export const Tweets = () => {
-  const users = userData.users;
-  const [value, setValue] = useState("all");
+  // const users = userData.users
+  const [value, setValue] = useState('all')
+
   const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+    setValue(e.target.value)
+  }
 
   return (
     <div className={css.wrapper}>
@@ -30,7 +31,7 @@ export const Tweets = () => {
         </label>
         <p>Showing {value}</p>
       </div>
-      <CardList filter={value} users={users} />
+      <CardList filter={value} />
     </div>
-  );
-};
+  )
+}

@@ -1,30 +1,35 @@
-import { useEffect, useState } from "react";
-import css from "./CardTweet.module.css";
-import logo from "../../image/goit_logo.png";
-import avatarDefault from "../../image/avatar.png";
+import { useEffect, useState } from 'react'
+import css from './CardTweet.module.css'
+import logo from '../../image/goit_logo.png'
+import avatarDefault from '../../image/avatar.png'
 
-export const CardTweet = ({ user }) => {
-  const { id, tweets, followers, avatar = avatarDefault } = user;
+export const CardTweet = ({
+  id,
+  user,
+  tweets,
+  followers,
+  avatar = avatarDefault,
+}) => {
   const [isFollowing, setIsFollowing] = useState(
-    JSON.parse(localStorage.getItem(`${id}-isFollowing`)) ?? false
-  );
+    JSON.parse(localStorage.getItem(`${id}-isFollowing`)) ?? false,
+  )
   const [followersNum, setFollowersNum] = useState(
-    JSON.parse(localStorage.getItem(`${id}-followersNum`)) ?? followers
-  );
+    JSON.parse(localStorage.getItem(`${id}-followersNum`)) ?? followers,
+  )
 
   useEffect(() => {
-    localStorage.setItem(`${id}-isFollowing`, JSON.stringify(isFollowing));
-    localStorage.setItem(`${id}-followersNum`, JSON.stringify(followersNum));
-  }, [id, isFollowing, followersNum]);
+    localStorage.setItem(`${id}-isFollowing`, JSON.stringify(isFollowing))
+    localStorage.setItem(`${id}-followersNum`, JSON.stringify(followersNum))
+  }, [id, isFollowing, followersNum])
 
   const onFollowClick = () => {
-    setIsFollowing(true);
-    setFollowersNum(followersNum + 1);
-  };
+    setIsFollowing(true)
+    setFollowersNum(followersNum + 1)
+  }
   const onFollowingClick = () => {
-    setIsFollowing(false);
-    setFollowersNum(followersNum - 1);
-  };
+    setIsFollowing(false)
+    setFollowersNum(followersNum - 1)
+  }
 
   return (
     <div className={css.card}>
@@ -35,9 +40,10 @@ export const CardTweet = ({ user }) => {
           <img alt="avatar" src={avatar} className={css.avatarInner}></img>
         </div>
       </div>
+      <p className={css.user}> {user} tweets</p>
       <p className={css.tweetsText}> {tweets} tweets</p>
       <p className={css.followersText}>
-        {followersNum.toLocaleString("en-US")} Followers
+        {followersNum.toLocaleString('en-US')} Followers
       </p>
       <div className={css.buttonBox}>
         {isFollowing ? (
@@ -55,5 +61,5 @@ export const CardTweet = ({ user }) => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}

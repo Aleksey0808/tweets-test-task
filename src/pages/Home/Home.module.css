@@ -19,6 +19,7 @@
   text-align: center;
 }
 .button {
+  margin-top: 20px;
   padding: 14px 46px;
   display: flex;
   justify-content: center;
