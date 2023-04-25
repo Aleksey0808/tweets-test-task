@@ -9,7 +9,6 @@ const Home = () => {
     <div className={css.header}>
       <div className={css.logo}>
         <img src={bigLogo} alt="logo" width={100}></img>
-        <div className={css.logoText}>Tech Test</div>
       </div>
 
       <h1>Test Task</h1>

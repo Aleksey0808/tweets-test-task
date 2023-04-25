@@ -10,6 +10,7 @@ export const CardTweet = ({
   followers,
   avatar = avatarDefault,
 }) => {
+  console.log(followers.toLocaleString('en-US'))
   const [isFollowing, setIsFollowing] = useState(
     JSON.parse(localStorage.getItem(`${id}-isFollowing`)) ?? false,
   )
@@ -40,7 +41,7 @@ export const CardTweet = ({
           <img alt="avatar" src={avatar} className={css.avatarInner}></img>
         </div>
       </div>
-      <p className={css.user}> {user} tweets</p>
+      <p className={css.user}>{user}</p>
       <p className={css.tweetsText}> {tweets} tweets</p>
       <p className={css.followersText}>
         {followersNum.toLocaleString('en-US')} Followers

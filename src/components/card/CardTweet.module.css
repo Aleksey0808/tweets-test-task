@@ -41,7 +41,7 @@
 
 .user {
   padding-top: 55px;
- font-size: 22px;
+ font-size: 14px;
 }
 
 .picture {
@@ -99,10 +99,21 @@
   width: 196px;
   cursor: pointer;
 }
+.button:hover {
+  transform: scale(1.04);
+  transition: all 0.4s cubic-bezier(0.5, 0, 0.3, 1);
+  color: #fff;
+  background: #dcc3f7;
+}
 .buttonFollowing {
   background-color: #5cd3a8;
-  padding-left: 39px;
-  padding-right: 39px;
+  
+  padding: 20px 39px;
+}
+.buttonFollowing:hover {
+  transform: scale(1.04);
+  transition: all 0.4s cubic-bezier(0.5, 0, 0.3, 1);
+  color: #fff;
 }
 .buttonBox {
   display: flex;
