@@ -6,7 +6,7 @@ import { BsArrowRightCircleFill } from 'react-icons/bs'
 
 const Home = () => {
   return (
-    <div className={css.header}>
+    <div className={css.wrapper}>
       <div className={css.logo}>
         <img src={bigLogo} alt="logo" width={100}></img>
       </div>

@@ -10,7 +10,6 @@ export const CardTweet = ({
   followers,
   avatar = avatarDefault,
 }) => {
-  console.log(followers.toLocaleString('en-US'))
   const [isFollowing, setIsFollowing] = useState(
     JSON.parse(localStorage.getItem(`${id}-isFollowing`)) ?? false,
   )
