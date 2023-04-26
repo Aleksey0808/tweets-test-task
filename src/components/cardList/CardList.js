@@ -29,7 +29,7 @@ export const CardList = ({ filter }) => {
           return null
       }
     })
-
+    console.log(filteredUsers)
     setSortedUsers(filteredUsers)
   }, [filter, users])
 

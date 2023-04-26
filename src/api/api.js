@@ -6,7 +6,6 @@ export default async function fetchUsers() {
   try {
     const response = await axios.get('/users')
 
-    // console.log(response.data)
     return response.data
   } catch (error) {
     console.log(error)
